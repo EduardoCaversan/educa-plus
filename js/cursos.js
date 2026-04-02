@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       grid.innerHTML = '<p>Carregando...</p>'
 
-      const response = await fetch('./data/videos.json')
+      const response = await fetch('data/videos.json')
 
       if (!response.ok) throw new Error('Erro ao carregar JSON')
 
