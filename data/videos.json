@@ -1,17 +1,182 @@
 [
     {
         "id": "PkZNo7MFNFg",
-        "title": "JS Básico",
+        "title": "JavaScript Full Course - Beginner to Advanced",
+        "category": "javascript"
+    },
+    {
+        "id": "W6NZfCO5SIk",
+        "title": "JavaScript Tutorial for Beginners",
+        "category": "javascript"
+    },
+    {
+        "id": "jS4aFq5-91M",
+        "title": "JavaScript DOM Crash Course",
+        "category": "javascript"
+    },
+    {
+        "id": "hdI2bqOjy3c",
+        "title": "JavaScript Basics - FreeCodeCamp",
+        "category": "javascript"
+    },
+    {
+        "id": "sBws8MSXN7A",
+        "title": "Async JavaScript Explained",
         "category": "javascript"
     },
     {
         "id": "rfscVS0vtbw",
-        "title": "Python Básico",
+        "title": "Python Full Course for Beginners",
+        "category": "python"
+    },
+    {
+        "id": "kqtD5dpn9C8",
+        "title": "Python Tutorial for Beginners",
+        "category": "python"
+    },
+    {
+        "id": "XKHEtdqhLK8",
+        "title": "Python in 100 Seconds",
+        "category": "python"
+    },
+    {
+        "id": "N4mEzFDjqtA",
+        "title": "Python OOP Tutorial",
+        "category": "python"
+    },
+    {
+        "id": "7lmCu8wz8ro",
+        "title": "Python Automation Tutorial",
         "category": "python"
     },
     {
         "id": "KJgsSFOSQv0",
-        "title": "C Básico",
+        "title": "C Programming Full Course",
         "category": "c"
+    },
+    {
+        "id": "ZSPZob_1TOk",
+        "title": "C Language Tutorial for Beginners",
+        "category": "c"
+    },
+    {
+        "id": "Bz4MxDeEM6k",
+        "title": "Pointers in C Explained",
+        "category": "c"
+    },
+    {
+        "id": "Q5uZ9oE9f2Y",
+        "title": "C Memory Management",
+        "category": "c"
+    },
+    {
+        "id": "UB1O30fR-EE",
+        "title": "HTML Crash Course",
+        "category": "web"
+    },
+    {
+        "id": "yfoY53QXEnI",
+        "title": "CSS Crash Course",
+        "category": "web"
+    },
+    {
+        "id": "3JluqTojuME",
+        "title": "Responsive Web Design",
+        "category": "web"
+    },
+    {
+        "id": "1Rs2ND1ryYc",
+        "title": "Flexbox Tutorial",
+        "category": "web"
+    },
+    {
+        "id": "phWxA89Dy94",
+        "title": "CSS Grid Tutorial",
+        "category": "web"
+    },
+    {
+        "id": "Ke90Tje7VS0",
+        "title": "React Full Course",
+        "category": "frontend"
+    },
+    {
+        "id": "SqcY0GlETPk",
+        "title": "Node.js Crash Course",
+        "category": "backend"
+    },
+    {
+        "id": "Oe421EPjeBE",
+        "title": "Express.js Tutorial",
+        "category": "backend"
+    },
+    {
+        "id": "ua-CiDNNj30",
+        "title": "Git and GitHub for Beginners",
+        "category": "tools"
+    },
+    {
+        "id": "RGOj5yH7evk",
+        "title": "GitHub Tutorial",
+        "category": "tools"
+    },
+    {
+        "id": "8JJ101D3knE",
+        "title": "VS Code Tips and Tricks",
+        "category": "tools"
+    },
+    {
+        "id": "8hly31xKli0",
+        "title": "Machine Learning Full Course",
+        "category": "ai"
+    },
+    {
+        "id": "aircAruvnKk",
+        "title": "Neural Networks Explained",
+        "category": "ai"
+    },
+    {
+        "id": "GwIo3gDZCVQ",
+        "title": "AI for Beginners",
+        "category": "ai"
+    },
+    {
+        "id": "HXV3zeQKqGY",
+        "title": "SQL Tutorial for Beginners",
+        "category": "data"
+    },
+    {
+        "id": "2ePf9rue1Ao",
+        "title": "Linux for Beginners",
+        "category": "linux"
+    },
+    {
+        "id": "wBp0Rb-ZJak",
+        "title": "Command Line Crash Course",
+        "category": "linux"
+    },
+    {
+        "id": "oxuRxtrO2Ag",
+        "title": "Linux File System Explained",
+        "category": "linux"
+    },
+    {
+        "id": "F2JCjVSZlG0",
+        "title": "Algorithms and Data Structures",
+        "category": "cs"
+    },
+    {
+        "id": "8hly31xKli0",
+        "title": "Computer Science Full Course",
+        "category": "cs"
+    },
+    {
+        "id": "rfscVS0vtbw",
+        "title": "Programming Logic for Beginners",
+        "category": "logic"
+    },
+    {
+        "id": "zOjov-2OZ0E",
+        "title": "How to Think Like a Programmer",
+        "category": "logic"
     }
 ]
