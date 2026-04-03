@@ -5,58 +5,106 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!sidebar) return
 
   const isLogged = localStorage.getItem('loggedIn') === 'true'
-  const currentPage = window.location.pathname.split('/').pop()
+
+  const currentPage = location.pathname.includes('cursos')
+    ? 'cursos.html'
+    : location.pathname.includes('login')
+      ? 'login.html'
+      : location.pathname.includes('cadastro')
+        ? 'cadastro.html'
+        : 'index.html'
+
+  // cria backdrop
+  const backdrop = document.createElement('div')
+  backdrop.className = 'sidebar-backdrop'
+  document.body.appendChild(backdrop)
+
   sidebar.innerHTML = ''
 
-  function addLink(href, text) {
-    if (href === currentPage) return
+  // título
+  const title = document.createElement('h2')
+  title.textContent = 'Educa+'
+  sidebar.appendChild(title)
 
-    const a = document.createElement('a')
-    a.href = href
-    a.textContent = text
-    sidebar.appendChild(a)
+  function createItem(href, text, icon) {
+    const el = document.createElement('a')
+    el.href = href
+
+    if (href === currentPage) el.classList.add('active')
+
+    el.innerHTML = `
+      <span class="material-icons">${icon}</span>
+      <span>${text}</span>
+    `
+
+    addRipple(el)
+    sidebar.appendChild(el)
   }
 
-  addLink('index.html', 'Início')
+  function createLogout() {
+    const btn = document.createElement('button')
 
-  if (isLogged) {
-    addLink('cursos.html', 'Cursos')
+    btn.innerHTML = `
+      <span class="material-icons">logout</span>
+      <span>Sair</span>
+    `
 
-    const logoutBtn = document.createElement('button')
-    logoutBtn.textContent = 'Sair'
-
-    logoutBtn.onclick = () => {
+    btn.onclick = () => {
       localStorage.clear()
       window.location.href = 'login.html'
     }
 
-    sidebar.appendChild(logoutBtn)
-
-  } else {
-    addLink('cadastro.html', 'Cadastro')
-    addLink('login.html', 'Login')
+    addRipple(btn)
+    sidebar.appendChild(btn)
   }
 
-  // abrir/fechar pelo botão
-  toggle?.addEventListener('click', (e) => {
-    e.stopPropagation() // impede fechar imediatamente
-    sidebar.classList.toggle('open')
-  })
+  function addRipple(element) {
+    element.addEventListener('click', function (e) {
+      const circle = document.createElement('span')
+      circle.classList.add('ripple')
 
-  // impedir clique dentro da sidebar de fechar
-  sidebar.addEventListener('click', (e) => {
-    e.stopPropagation()
-  })
+      const rect = element.getBoundingClientRect()
+      const size = Math.max(rect.width, rect.height)
 
-  // fechar clicando fora
-  document.addEventListener('click', () => {
+      circle.style.width = circle.style.height = size + 'px'
+      circle.style.left = e.clientX - rect.left - size / 2 + 'px'
+      circle.style.top = e.clientY - rect.top - size / 2 + 'px'
+
+      element.appendChild(circle)
+
+      setTimeout(() => circle.remove(), 500)
+    })
+  }
+
+  // menu
+  createItem('index.html', 'Início', 'home')
+
+  if (isLogged) {
+    createItem('cursos.html', 'Cursos', 'school')
+    createLogout()
+  } else {
+    createItem('cadastro.html', 'Cadastro', 'person_add')
+    createItem('login.html', 'Login', 'login')
+  }
+
+  function openSidebar() {
+    sidebar.classList.add('open')
+    backdrop.classList.add('open')
+  }
+
+  function closeSidebar() {
     sidebar.classList.remove('open')
+    backdrop.classList.remove('open')
+  }
+
+  toggle?.addEventListener('click', (e) => {
+    e.stopPropagation()
+    openSidebar()
   })
 
-  // fechar com ESC (bônus profissional)
+  backdrop.addEventListener('click', closeSidebar)
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      sidebar.classList.remove('open')
-    }
+    if (e.key === 'Escape') closeSidebar()
   })
 })

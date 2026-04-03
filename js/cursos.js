@@ -54,12 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
       el.className = 'video-card'
 
       el.innerHTML = `
-        <h3>${v.title}</h3>
-        <iframe 
-          src="https://www.youtube.com/embed/${v.id}" 
-          allowfullscreen>
-        </iframe>
-        <p>${v.description || ''}</p>
+        <iframe src="https://www.youtube.com/embed/${v.id}" loading="lazy"></iframe>
+        <div class="video-card-content">
+          <h3>${v.title}</h3>
+        </div>
       `
 
       grid.appendChild(el)

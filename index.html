@@ -7,17 +7,24 @@
     <title>Educa+</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/student.ico">
 </head>
 
 <body>
     <header class="header">
-        <h1>Educa+</h1>
-
-        <div class="header-actions">
-            <span id="user-name"></span>
-            <button id="theme-toggle">🌙</button>
+        <div class="header-left">
+            <h1>Educa+</h1>
         </div>
-        <span class="material-icons menu-toggle" id="menu-toggle">menu</span>
+
+        <div class="header-left">
+            <div class="header-actions">
+                <span id="user-name"></span>
+                <button id="theme-toggle" class="theme-btn">
+                    <span class="material-icons" id="theme-icon">dark_mode</span>
+                </button>
+            </div>
+            <span class="material-icons menu-toggle" id="menu-toggle">menu</span>
+        </div>
         <div id="sidebar" class="sidebar">
             <a href="index.html">Início</a>
             <a href="cursos.html">Cursos</a>
@@ -32,10 +39,18 @@
     <main class="container">
         <h2>Educação gratuita para todos</h2>
         <p>Plataforma com cursos gratuitos via YouTube.</p>
+        <figure class="hero">
+            <img src="./assets/education.png" alt="Educação digital">
+        </figure>
     </main>
 
     <footer class="footer">
         <p>&copy; 2026 Educa+</p>
+
+        <a href="./assets/curriculo.pdf" class="cv-btn" target="_blank">
+            <span class="material-icons">description</span>
+            Ver Currículo
+        </a>
     </footer>
 
     <script src="./js/auth.js"></script>

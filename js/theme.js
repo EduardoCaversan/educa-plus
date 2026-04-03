@@ -1,14 +1,15 @@
 const btn = document.getElementById('theme-toggle')
+const icon = document.getElementById('theme-icon')
 
 function applyTheme() {
   const saved = localStorage.getItem('theme')
 
   if (saved === 'dark') {
     document.body.classList.add('dark')
-    btn.innerHTML = '☀️'
+    icon.textContent = 'light_mode'
   } else {
     document.body.classList.remove('dark')
-    btn.innerHTML = '🌙'
+    icon.textContent = 'dark_mode'
   }
 }
 
