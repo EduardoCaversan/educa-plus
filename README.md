@@ -141,7 +141,8 @@ O sistema foi pensado para oferecer:
 
 ## 👥 Integrantes
 
-* **Eduardo Caversan**
+* **Eduardo Caversan** - 2475391
+* **Felipe Rodrigues Cruz** - 2677970
 
 ---
 
