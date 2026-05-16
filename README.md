@@ -109,6 +109,14 @@ index.html
 
 ---
 
+### 🌐 Vídeo do projeto no Youtube
+
+Acesse o vídeo de apresentação:
+
+👉 https://youtu.be/1zcmKufz0K4
+
+---
+
 ### 🌐 Deploy (GitHub Pages)
 
 Acesse a aplicação online:
